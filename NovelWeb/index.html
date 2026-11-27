@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/leaf.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/leaf.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#18a058" />
+    <meta name="description" content="冰柏叶小说库 —— 在线阅读、收藏、评论与实时私信" />
+    <!-- 首屏要用的图片提前预加载，减少「白屏之后才出图」的观感 -->
+    <link rel="preload" as="image" href="/images/hero.jpg" />
+    <link rel="preload" as="image" href="/images/leaf.svg" />
+    <title>冰柏叶小说库</title>
+    <style>
+      /* 骨架：JS 还没执行时先给个底色，避免纯白闪屏 */
+      html,
+      body {
+        margin: 0;
+        background: #f4f6f8;
+      }
+      #app:empty::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: #f4f6f8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
